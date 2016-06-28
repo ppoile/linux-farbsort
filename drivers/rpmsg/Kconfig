@@ -35,4 +35,12 @@ config RPMSG_PRU
 
 	  If unsure, say N.
 
+config RPMSG_LOGGER
+	tristate "Logger service for rpmsg clients"
+	default n
+	depends on RPMSG
+	help
+	  Prints log output from a remote device.
+
+
 endmenu
