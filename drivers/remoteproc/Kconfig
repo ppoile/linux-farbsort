@@ -108,6 +108,18 @@ config PRUSS_REMOTEPROC
 	  not interested in the PRU or if you are unsure.
 	  If unsure say N.
 
+config PRUSS_AM335X_TSCADC
+	tristate "Linux-Side Resource allocator to use ADC from PRUSS"
+	depends on !MFD_TI_AM335X_TSCADC
+	select REMOTEPROC
+	default n
+	help
+	  Driver to allocate ADC resources and enable power and clock for the
+	  ADC to use the ADC from the PRU.
+
+	  It uses the same name and entries as the original am335x tscadc driver
+	  and hence replaced it.
+
 config KEYSTONE_REMOTEPROC
 	tristate "Keystone Remoteproc support"
 	depends on ARCH_KEYSTONE

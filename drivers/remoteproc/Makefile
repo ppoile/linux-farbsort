@@ -13,3 +13,4 @@ obj-$(CONFIG_WKUP_M3_RPROC)		+= wkup_m3_rproc.o
 obj-$(CONFIG_DA8XX_REMOTEPROC)		+= da8xx_remoteproc.o
 obj-$(CONFIG_PRUSS_REMOTEPROC)		+= pruss.o pruss_intc.o pru_rproc.o
 obj-$(CONFIG_KEYSTONE_REMOTEPROC)	+= keystone_remoteproc.o
+obj-$(CONFIG_PRUSS_AM335X_TSCADC)	+= ti_am335x_tscadc_pru.o
