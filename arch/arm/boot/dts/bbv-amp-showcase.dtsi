@@ -1,0 +1,29 @@
+/*
+ * Copyright (C) 2015 Texas Instruments Incorporated - http://www.ti.com/
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 as
+ * published by the Free Software Foundation.
+ */
+
+&am33xx_pinmux {
+	pinctrl-0 = <&bbv_amp_showcase_pins>;
+	bbv_amp_showcase_pins: bbv_amp_showcase_pins {
+		pinctrl-single,pins = <
+			0x020 (PIN_INPUT_PULLUP | MUX_MODE7)     /* LightBarrier 5 (Input)     BB-P8.19  FT-12  U10, GPMC_AD8       gpio0_22(7) */
+			0x024 (PIN_OUTPUT_PULLDOWN | MUX_MODE7)  /* Compressor (Output)        BB-P8.13  FT-18  T10, GPMC_AD9       gpio0_23(7) */
+			0x028 (PIN_INPUT_PULLUP | MUX_MODE7)     /* LightBarrier 3 (Input)     BB-P8.14  FT-10  T11, GPMC_AD10      gpio0_26(7) */
+			0x02c (PIN_INPUT_PULLUP | MUX_MODE7)     /* LightBarrier 4 (Input)     BB-P8.17  FT-11  U12, GPMC_AD11      gpio0_27(7) */
+			0x030 (PIN_OUTPUT_PULLDOWN | MUX_MODE7)  /* Valve 1 (Output)           BB-P8.12  FT-20  T12  GPMC_AD12      pru0_gpo(6),gpio1_12(7) */
+			0x034 (PIN_OUTPUT_PULLDOWN | MUX_MODE7)  /* Motor (Output)             BB-P8.11  FT-17  R12  GPMC_AD13      pru0_gpo(6),gpio1_13(7) */
+			0x038 (PIN_INPUT_PULLUP | MUX_MODE7)     /* LightBarrier 1 (Input)     BB-P8.16  FT-6   V13  GPMC_AD14      pru0_gpi(6),gpio1_14(7) */
+			0x03c (PIN_INPUT_PULLUP | MUX_MODE7)     /* Pulse Counter (Input)      BB-P8.15  FT-5   U13  GPMC_AD15      pru0_gpi(6),gpio1_15(7) */
+			0x06c (PIN_OUTPUT_PULLDOWN | MUX_MODE7)  /* (Output=0 to disable Clk)                   V17  GPMC_A11       gpio1_27(7) */
+			0x184 (PIN_INPUT_PULLUP | MUX_MODE7)     /* LightBarrier 2 (Input)     BB-P9.24  FT-7   D15  UART1_TXD      pru0_gpi(6),gpio0_15(7) */
+			0x198 (PIN_INPUT_PULLUP | MUX_MODE7)     /* LB3 && LB4 && LB5 (Input)  BB-P9.30         D12  MCASP0_AXR0    pru0_gpio2(5,6),gpio3_16(7) */
+			0x1a4 (PIN_OUTPUT_PULLDOWN | MUX_MODE7)  /* Valve 3 (Output)           BB-P9.27  FT-22  C13  MCASP0_FSR     pru0_gpio5(5,6),gpio3_19(7) */
+			0x1ac (PIN_OUTPUT_PULLDOWN | MUX_MODE7)  /* Valve 2 (Output)           BB-P9.25  FT-21  A14  MCASP0_AHCLKX  pru0_gpio7(5,6),gpio3_21(7) */
+			0x1b4 (PIN_OUTPUT_PULLDOWN | MUX_MODE3)  /* clkout2_pin-definition from am335x-bone-common.dtsi (not referenced any more) */
+		>;
+	};
+};
